@@ -1,0 +1,18 @@
+{
+  "alias": "translation",
+  "allow_update": "",
+  "author": {
+    "email": "liudan92221@gmail.com",
+    "name": "震动"
+  },
+  "dependencies": {},
+  "description": "翻译工具",
+  "devDependencies": {},
+  "license": "MIT",
+  "name": "Translation",
+  "publishConfig": {
+    "registry": "http://registry.npm.taobao.com"
+  },
+  "scripts": {},
+  "version": "1.0.0"
+}
