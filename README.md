@@ -16,4 +16,5 @@ translate [param]
 ```
 translate man
 translate I am
+translate 人
 ```

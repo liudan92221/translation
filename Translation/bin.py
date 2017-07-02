@@ -13,17 +13,27 @@ MAP = {
 }
 
 
+def isChinese(text):
+  if u'\u4e00' <= text <= u'\u9fff':
+    return True
+  return False
+
+
 def translate(text):
   params = {
     'client': 'gtx',
     'sl': 'en',
     'tl': 'zh-CN',
     'q': text,
+    'ie': 'UTF-8'
     # 'format': 'text',
     # 'model': 'base',
     # 'target': 'zh-CN',
     # 'key': ''
   }
+  if isChinese(text) == True:
+    params['sl'] = 'zh-CN'
+    params['tl'] = 'en'
   # t - 源text的翻译
   # at - 会额外返回一些近义词
   # ex - examples
@@ -90,7 +100,8 @@ def execute(argv=sys.argv):
   '''
 
   content = translate(' '.join(argv[1:]))
-  print(colored(content['source'], 'red') + colored(' [' + content['phonetic'] + '] ' + content['target'], 'green') + '\n')
+  print(
+  colored(content['source'], 'red') + colored(' [' + content['phonetic'] + '] ' + content['target'], 'green') + '\n')
   for w in content['word']:
     print(colored(w['type'], 'cyan') + ' ' + colored(w['text'], 'red'))
 
