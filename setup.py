@@ -24,7 +24,7 @@ setup(
   include_package_data=True,
   zip_safe=False,
   entry_points={
-    'console_scripts': ['translation = Translation.bin:execute']
+    'console_scripts': ['translate = Translation.bin:execute']
   },
   classifiers=[
     'Framework :: Translation',
