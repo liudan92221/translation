@@ -24,7 +24,12 @@ setup(
   include_package_data=True,
   zip_safe=False,
   entry_points={
-    'console_scripts': ['translate = Translation.bin:execute']
+    'console_scripts': [
+      'translate = Translation.bin:execute',
+      'words = Translation.bin:makeWordList',
+      'copy = Translation.bin:copyWords',
+      'join = Translation.bin:joinWords'
+    ]
   },
   classifiers=[
     'Framework :: Translation',

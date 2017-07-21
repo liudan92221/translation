@@ -1,0 +1,4 @@
+include Translation/json.json
+include Translation/arr.json
+include Translation/_index.html
+include README.md
